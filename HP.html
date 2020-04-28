@@ -13,13 +13,151 @@
                 font-size: 60px;
                 margin: 0px;
                 color: white;
-                font-family: Aharoni;
+                font-family: 'Aharoni';
+                z-index: 1;
             }
+            .indextile {
+                position: absolute;
+                left:50px;
+                top: 150px;
+                z-index: 2;
+            }
+            #Profiletile {
+                position: absolute;
+                left: 500px;
+                top: 150px;
+                z-index: 3;
+                cursor: "pointer";
+            }
+            .Skilltile {
+                position: absolute;
+                left: 950px;
+                top: 123px;
+                z-index: 4;
+            }
+            .Applicationtile {
+                position: absolute;
+                left: 50px;
+                top: 550px;
+                z-index: 5;
+            }
+            .Contacttile {
+                position: absolute;
+                left: 800px;
+                top: 548px;
+                z-index: 6;
+            }
+            .redbartile {
+                position: absolute;
+                left: 1575px;
+                top: 150px;
+                z-index: 7;
+            }
+            .greenbartile {
+                position: absolute;
+                left: 1500px;
+                top: 573px;
+                z-index: 8;
+            }
+            #ProfilePopUP {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 9;
+            }
+            .SkillPopUP {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 9;
+            }
+            .ApplicationPopUP {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 9;
+            }
+            .ContactPopUP {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 9;
+            }
+            .p1 {
+                font-size: 45px;
+                margin: 0px;
+                color: black;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                position: absolute;
+                top: 70%;
+                left: 30%;
+                z-index: 10;
+            }
+            #close1 {
+                position: absolute;
+                z-index: 10;
+                top: 1.5%;
+                left: 96%;
+                cursor: "pointer";
+            }
+            
         </style>
      </head>
      <body>
          <div>
              <p><b>Kazumasa Hara's PORTFOLIO</b></p>
+             <!-- タイル一覧 -->
+             <div class = "indextile"><image src = "img\titletile1.jpg"></image></div>
+             <div Id = "Profiletile"><image src = "img\titletile2.jpg"></image>
+             </div>
+             <div class = "Skilltile"><image src = "img\titletile3.png"></image></div>
+             <div class = "Applicationtile"><image src = "img\titletile4.png"></image></div>
+             <div class = "Contacttile"><image src = "img\titletile5.png"></image></div>
+             <div class = "redbartile"><image src = "img\titletile6.png"></image></div>
+             <div class = "greenbartile"><image src = "img\titletile7.png"></image></div>
+             <!-- タイル一覧END -->
+             <!-- タイル指定先 -->
+             <div Id = "ProfilePopUP"><image src = "img\Profile.png"></image>
+             <div Id = "close1"><image src = "img\close.png"></image>
+            </div></div>
+             <div class = "SkillPopUP"><image src = "img\Skill.png"></image></div>
+             <div class = "ApplicationPopUP"><image src = "img\Application.png"></image></div>
+             <div class = "ContactPopUP"><image src = "img\Contact-notmailaddres.png"></image><p class = "p1">
+                Kazumasa.hara@force-corp.co.jp 
+             </p></div>
+             <!-- タイル指定先END -->
          </div>
+         <script>
+            "use strict"
+            const Profile = document.getElementById('Profiletile')
+            const ProfilePopUP = document.getElementById('ProfilePopUP')
+            const close1 = document.getElementById('close1')
+                const OnbuttonClickProfile = () => {
+                    if(ProfilePopUP.style.display === "none"){
+                        ProfilePopUP.style.display = "block";
+                    }else {
+                        ProfilePopUP.style.display = "none"
+                    }
+                }
+                ProfilePopUP.style.display = "none"
+                Profile.addEventListener('click',() => {
+                    if(ProfilePopUP.style.display === "none"){
+                        ProfilePopUP.style.display = "block";
+                    }
+                });
+                close1.addEventListener('click',() => {
+                    if(ProfilePopUP.style.display === "block"){
+                        ProfilePopUP.style.display = "none";
+                        }
+                })
+            </script>
         </body>
         </html>
