@@ -8,7 +8,21 @@
         <style>
             body{
                 background: linear-gradient(135deg, #52c234, #061700)fixed;
+                /* animation: bg-move 1s linear 0s infinite; */
             }
+            /* @keyframes bg-move{
+                0%{background: linear-gradient(60deg, #52c234, #061700) fixed;}
+                10%{background: linear-gradient(80deg, #52c234, #061700) fixed;}
+                20%{background: linear-gradient(100deg, #52c234, #061700) fixed;}
+                30%{background: linear-gradient(120deg, #52c234, #061700) fixed;}
+                40%{background: linear-gradient(140deg, #52c234, #061700) fixed;}
+                50%{background: linear-gradient(160deg, #52c234, #061700) fixed;}
+                60%{background: linear-gradient(140deg, #52c234, #061700) fixed;}
+                70%{background: linear-gradient(120deg, #52c234, #061700) fixed;}
+                80%{background: linear-gradient(100deg, #52c234, #061700) fixed;}
+                90%{background: linear-gradient(80deg, #52c234, #061700) fixed;}
+                100%{background: linear-gradient(60deg, #52c234, #061700) fixed;}
+            } */
             p{
                 font-size: 60px;
                 margin: 0px;
@@ -26,70 +40,78 @@
                 position: absolute;
                 left: 500px;
                 top: 150px;
-                z-index: 3;
-                cursor: "pointer";
+                z-index: 2;
+                cursor: pointer;
             }
-            .Skilltile {
+            #Skilltile {
                 position: absolute;
                 left: 950px;
                 top: 123px;
-                z-index: 4;
+                z-index: 2;
+                cursor: pointer;
             }
-            .Applicationtile {
+            #Applicationtile {
                 position: absolute;
                 left: 50px;
                 top: 550px;
-                z-index: 5;
+                z-index: 2;
+                cursor: pointer;
             }
-            .Contacttile {
+            #Contacttile {
                 position: absolute;
                 left: 800px;
                 top: 548px;
-                z-index: 6;
+                z-index: 2;
+                cursor: pointer;
             }
             .redbartile {
                 position: absolute;
                 left: 1575px;
                 top: 150px;
-                z-index: 7;
+                z-index: 2;
             }
             .greenbartile {
                 position: absolute;
                 left: 1500px;
                 top: 573px;
-                z-index: 8;
+                z-index: 2;
             }
             #ProfilePopUP {
                 display: none;
+                box-shadow: 0 0 0 500px rgba(0, 0, 0, .5);
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
-                z-index: 9;
+                z-index: 4;
             }
-            .SkillPopUP {
+            #SkillPopUP {
                 display: none;
+                box-shadow: 0 0 0 500px rgba(0, 0, 0, .5);
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
-                z-index: 9;
+                z-index: 4;
             }
-            .ApplicationPopUP {
+            #ApplicationPopUP {
                 display: none;
+                box-shadow: 0 0 0 500px rgba(0, 0, 0, .5);
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
-                z-index: 9;
+                z-index: 4;
             }
-            .ContactPopUP {
+            
+            #ContactPopUP {
                 display: none;
+                box-shadow: 0 0 0 500px rgba(0, 0, 0, .5);
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
-                z-index: 9;
+                z-index: 4;
             }
             .p1 {
                 font-size: 45px;
@@ -101,14 +123,34 @@
                 left: 30%;
                 z-index: 10;
             }
-            #close1 {
+            #exit1 {
                 position: absolute;
                 z-index: 10;
                 top: 1.5%;
                 left: 96%;
-                cursor: "pointer";
+                cursor: pointer;
             }
-            
+            #exit2 {
+                position: absolute;
+                z-index: 10;
+                top: 1.0%;
+                left: 96%;
+                cursor: pointer;
+            }
+            #exit3 {
+                position: absolute;
+                z-index: 10;
+                top: 1.5%;
+                left: 96%;
+                cursor: pointer;
+            }
+            #exit4 {
+                position: absolute;
+                z-index: 10;
+                top: 1.5%;
+                left: 96%;
+                cursor: pointer;
+            }
         </style>
      </head>
      <body>
@@ -116,48 +158,82 @@
              <p><b>Kazumasa Hara's PORTFOLIO</b></p>
              <!-- タイル一覧 -->
              <div class = "indextile"><image src = "img\titletile1.jpg"></image></div>
-             <div Id = "Profiletile"><image src = "img\titletile2.jpg"></image>
-             </div>
-             <div class = "Skilltile"><image src = "img\titletile3.png"></image></div>
-             <div class = "Applicationtile"><image src = "img\titletile4.png"></image></div>
-             <div class = "Contacttile"><image src = "img\titletile5.png"></image></div>
+             <div Id = "Profiletile"><image src = "img\titletile2.jpg"></image></div>
+             <div Id = "Skilltile"><image src = "img\titletile3.png"></image></div>
+             <div Id = "Applicationtile"><image src = "img\titletile4.png"></image></div>
+             <div Id = "Contacttile"><image src = "img\titletile5.png"></image></div>
              <div class = "redbartile"><image src = "img\titletile6.png"></image></div>
              <div class = "greenbartile"><image src = "img\titletile7.png"></image></div>
              <!-- タイル一覧END -->
              <!-- タイル指定先 -->
              <div Id = "ProfilePopUP"><image src = "img\Profile.png"></image>
-             <div Id = "close1"><image src = "img\close.png"></image>
+             <div Id = "exit1"><image src = "img\close.png"></image>
             </div></div>
-             <div class = "SkillPopUP"><image src = "img\Skill.png"></image></div>
-             <div class = "ApplicationPopUP"><image src = "img\Application.png"></image></div>
-             <div class = "ContactPopUP"><image src = "img\Contact-notmailaddres.png"></image><p class = "p1">
+             <div Id = "SkillPopUP"><image src = "img\Skill.png"></image>
+                <div Id = "exit2"><image src = "img\close.png"></image>
+             </div></div>
+             <div Id = "ApplicationPopUP"><image src = "img\Application.png"></image>
+                <div Id = "exit3"><image src = "img\close.png"></image>
+                </div></div>
+             <div Id = "ContactPopUP"><image src = "img\Contact-notmailaddres.png"></image>
+                <div Id = "exit4"><image src = "img\close.png"></image>
+                </div><p class = "p1">
                 Kazumasa.hara@force-corp.co.jp 
              </p></div>
              <!-- タイル指定先END -->
-         </div>
          <script>
             "use strict"
+            //Profileのポップアップ表示スクリプト
             const Profile = document.getElementById('Profiletile')
             const ProfilePopUP = document.getElementById('ProfilePopUP')
-            const close1 = document.getElementById('close1')
-                const OnbuttonClickProfile = () => {
-                    if(ProfilePopUP.style.display === "none"){
-                        ProfilePopUP.style.display = "block";
-                    }else {
-                        ProfilePopUP.style.display = "none"
-                    }
-                }
+            const exit1 = document.getElementById('exit1')
+            const Skill = document.getElementById('Skilltile')
+            const SkillPopUP = document.getElementById('SkillPopUP')
+            const exit2 = document.getElementById('exit2')
+            const Application = document.getElementById('Applicationtile')
+            const ApplicationPopUP = document.getElementById('ApplicationPopUP')
+            const exit3 = document.getElementById('exit3')
+            const Contact = document.getElementById('Contacttile')
+            const ContactPopUP = document.getElementById('ContactPopUP')
+            const exit4 = document.getElementById('exit4')
+
+             //引数を使ってPopUPを表示
+             var isshowing = false
+             const showPopUP = (allPopUP) => {
+                    if(isshowing === false &&
+                        allPopUP.style.display === "none"){
+                        allPopUP.style.display = "block"
+                        isshowing = true;
+                }};
+            const hidePopUP = (allexit) => {
+                if(allexit.style.display === "block"){
+                        allexit.style.display = "none"
+                        isshowing = false;
+                }};
+               
+                //Profileのポップアップ表示スクリプト
+
                 ProfilePopUP.style.display = "none"
-                Profile.addEventListener('click',() => {
-                    if(ProfilePopUP.style.display === "none"){
-                        ProfilePopUP.style.display = "block";
-                    }
-                });
-                close1.addEventListener('click',() => {
-                    if(ProfilePopUP.style.display === "block"){
-                        ProfilePopUP.style.display = "none";
-                        }
-                })
+                Profile.addEventListener('click',() => {showPopUP(ProfilePopUP)});
+                exit1.addEventListener('click',() => {hidePopUP(ProfilePopUP)});
+                
+                // Skillのポップアップ表示スクリプト
+                
+                SkillPopUP.style.display = "none"
+                Skill.addEventListener('click',() => {showPopUP(SkillPopUP)});
+                exit2.addEventListener('click',() => {hidePopUP(SkillPopUP)});
+
+                 // Applivationのポップアップ表示スクリプト
+           
+                ApplicationPopUP.style.display = "none"
+                Application.addEventListener('click',() => {showPopUP(ApplicationPopUP)});
+                exit3.addEventListener('click',() => {hidePopUP(ApplicationPopUP)});
+
+                //Contactのポップアップ表示スクリプト
+
+                ContactPopUP.style.display = "none"
+                Contact.addEventListener('click',() => {showPopUP(ContactPopUP)});
+                exit4.addEventListener('click',() => {hidePopUP(ContactPopUP)});            
             </script>
         </body>
         </html>
