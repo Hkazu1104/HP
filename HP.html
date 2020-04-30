@@ -77,41 +77,49 @@
                 z-index: 2;
             }
             #ProfilePopUP {
-                display: none;
+                visibility: hidden;
+                opacity: 0;
                 box-shadow: 0 0 0 500px rgba(0, 0, 0, .5);
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
                 z-index: 4;
+                transition: 0.3s;
             }
             #SkillPopUP {
-                display: none;
+                visibility: hidden;
+                opacity: 0;
                 box-shadow: 0 0 0 500px rgba(0, 0, 0, .5);
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
                 z-index: 4;
+                transition: 0.3s;
             }
             #ApplicationPopUP {
-                display: none;
+                visibility: hidden;
+                opacity: 0;
                 box-shadow: 0 0 0 500px rgba(0, 0, 0, .5);
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
                 z-index: 4;
+                transition: 0.3s;
             }
             
             #ContactPopUP {
-                display: none;
+                visibility: hidden;
+                opacity: 0;
                 box-shadow: 0 0 0 500px rgba(0, 0, 0, .5);
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
                 z-index: 4;
+                transition: 0.3s;
             }
             .p1 {
                 font-size: 45px;
@@ -199,39 +207,43 @@
 
              //引数を使ってPopUPを表示
              var isshowing = false
+             var PopUP = null
              const showPopUP = (allPopUP) => {
                     if(isshowing === false &&
-                        allPopUP.style.display === "none"){
-                        allPopUP.style.display = "block"
+                        allPopUP.style.visibility === "hidden"){
+                        allPopUP.style.visibility = "visible"
                         isshowing = true;
+                        allPopUP.style.opacity = 1;
+                        PopUP = allPopUP
                 }};
             const hidePopUP = (allexit) => {
-                if(allexit.style.display === "block"){
-                        allexit.style.display = "none"
+                if(allexit.style.visibility === "visible"){
+                        allexit.style.visibility = "hidden"
                         isshowing = false;
+                        PopUP.style.opacity = 0;
                 }};
                
                 //Profileのポップアップ表示スクリプト
 
-                ProfilePopUP.style.display = "none"
+                ProfilePopUP.style.visibility = "hidden"
                 Profile.addEventListener('click',() => {showPopUP(ProfilePopUP)});
                 exit1.addEventListener('click',() => {hidePopUP(ProfilePopUP)});
                 
                 // Skillのポップアップ表示スクリプト
                 
-                SkillPopUP.style.display = "none"
+                SkillPopUP.style.visibility = "hidden"
                 Skill.addEventListener('click',() => {showPopUP(SkillPopUP)});
                 exit2.addEventListener('click',() => {hidePopUP(SkillPopUP)});
 
                  // Applivationのポップアップ表示スクリプト
            
-                ApplicationPopUP.style.display = "none"
+                ApplicationPopUP.style.visibility = "hidden"
                 Application.addEventListener('click',() => {showPopUP(ApplicationPopUP)});
                 exit3.addEventListener('click',() => {hidePopUP(ApplicationPopUP)});
 
                 //Contactのポップアップ表示スクリプト
 
-                ContactPopUP.style.display = "none"
+                ContactPopUP.style.visibility = "hidden"
                 Contact.addEventListener('click',() => {showPopUP(ContactPopUP)});
                 exit4.addEventListener('click',() => {hidePopUP(ContactPopUP)});            
             </script>
